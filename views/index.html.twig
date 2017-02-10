@@ -17,32 +17,48 @@
             <div class="jumbotron">
                 <h2 class='fancyfont'>Add a New Contact:</h2>
                 <form action='/create_contact' method='post'>
-                    <div class='row t'>
-                        <label for='contact_first_name'>First Name</label>
-                        <input type='text' name='contact_first_name' id='contact_first_name'>
-
-                        <label for='contact_last_name'>Last Name</label>
-                        <input type='text' name='contact_last_name' id='contact_last_name'>
+                    <div class='row typescript'>
+                        <div class='col-md-3 textalign'>
+                            <label for='contact_first_name'>First Name</label>
+                            <input type='text' name='contact_first_name' id='contact_first_name'>
+                        </div>
+                            <div class='col-md-3 textalign'>
+                            <label for='contact_last_name'>Last Name</label>
+                            <input type='text' name='contact_last_name' id='contact_last_name'>
+                        </div>
                         <br>
                         <br>
-                        <label for='contact_phone'>Phone Number</label>
-                        <input type='text' name='contact_phone' id='contact_phone'>
+                    </div>
+                    <div class='row typescript'>
+                        <div class='col-md-3 textalign'>
+                            <label for='contact_phone'>Phone Number</label>
+                            <input type='text' name='contact_phone' id='contact_phone'>
+                            <br>
+                            <br>
+                        </div>
+                    </div>
+                    <div class='row typescript'>
+                        <div class='col-md-3 textalign'>
+                            <label for='contact_street'>Street Address</label>
+                            <input type='text' name='contact_street' id='contact_street'>
+                        </div>
+                        <div class='col-md-3 textalign'>
+                            <label for='contact_city'>City</label>
+                            <input type='text' name='contact_city' id='contact_city'>
+                        </div>
+                        <div class='col-md-3 textalign'>
+                            <label for='contact_state'>State</label>
+                            <input type='text' name='contact_state' id='contact_state'>
+                        </div>
+                        <div class='col-md-3 textalign'>
+                            <label for='contact_zipcode'>Postal Code</label>
+                            <input type='text' name='contact_zipcode' id='contact_zipcode'>
+                        </div>
                         <br>
                         <br>
-                        <label for='contact_street'>Street Address</label>
-                        <input type='text' name='contact_street' id='contact_street'>
-
-                        <label for='contact_city'>City</label>
-                        <input type='text' name='contact_city' id='contact_city'>
-
-                        <label for='contact_state'>State</label>
-                        <input type='text' name='contact_state' id='contact_state'>
-
-                        <label for='contact_zipcode'>Postal Code</label>
-                        <input type='text' name='contact_zipcode' id='contact_zipcode'>
-                        <br>
-                        <br>
+                        <div class='centeralign'>
                         <button type='submit'>Add Contact</button>
+                        </div>
                     </div>
                 </form>
             </div>
@@ -50,9 +66,9 @@
         <div class='container'>
             {% if contacts is not empty %}
                 <div class=jumbotron>
-                    <h2>Current Contacts</h2>
+                    <h2 class='fancyfont'>Current Contacts</h2>
                     {% for contact in contacts %}
-                        <ul>
+                        <ul class='typescript'>
                             <li>Contact Name: {{ contact.getContactFirstName }} {{ contact.getContactLastName}}</li>
                             <ul>
                                 <li>Phone Number: {{ contact.getContactPhone }}</li>
@@ -66,7 +82,7 @@
                 </div>
             {% endif %}
         </div>
-        <div class='container'>
+        <div class='container typescript centeralign'>
             <form action='/delete_contacts' method='post'>
                 <button type='submit'>Delete All Contacts!</button>
             </form>

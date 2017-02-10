@@ -5,4 +5,17 @@
 
 .typescript {
   font-family: 'Crimson Text', serif;
+  font-weight: normal;
+}
+
+.textalign {
+  text-align: right;
+}
+
+.centeralign {
+  text-align: center;
+}
+
+body {
+  background-image: url(../img/background.jpg);
 }

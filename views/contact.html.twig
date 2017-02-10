@@ -11,15 +11,18 @@
     </head>
     <body>
         <div class='container'>
+            <div class="jumbotron">
+                <h1 class='fancyfont'>An Address Book!</h1>
+            </div>
             <div class='jumbotron'>
-                <h2>You added a new contact!</h2>
-                <h3>Behold his or her digits...</h3>
+                <h2 class='fancyfont'>You added a new contact!</h2>
+                <h3 class='fancyfont'>Behold his or her digits...</h3>
             </div>
             <div class='container'>
                 <div class='col-md-6'>
                     <div class=jumbotron>
                         {% for contact in contacts %}
-                            <ul>
+                            <ul class='typescript'>
                                 <li>Contact: {{ contact.getContactFirstName }} {{ contact.getContactLastName}}</li>
                                 <ul>
                                     <li>Phone Number: {{ contact.getContactPhone }}</li>
@@ -34,7 +37,7 @@
                 </div>
                 <div class='col-md-6'>
                     <form action='/' method='get'><br><br><br><br>
-                        <button type='submit'>return to main page</button>
+                        <button type='submit' class='typescript'>Return to Main Page</button>
                     </form>
                 </div>
             </div>
