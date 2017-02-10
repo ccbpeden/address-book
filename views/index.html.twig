@@ -1,13 +1,44 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="../css/styles.css" type="text/css" rel="stylesheet">
-    <title>Address Book</title>
-  </head>
-  <body>
-    <div class="container">
-      <div class="jumbotron">
-        <h1>An Address Book!</h1>
-      </div>
-    </div>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="../css/styles.css" type="text/css" rel="stylesheet">
+        <title>Address Book</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="jumbotron">
+                <h1>An Address Book!</h1>
+            </div>
+            <div class="jumbotron">
+                <h2>Add a New Contact:</h2>
+                <form action='/create_contact' method='post'>
+                    <div class='row'>
+                        <label for='contact_first_name'>First Name</label>
+                        <input type='text' name='contact_first_name' id='contact_first_name'>
+
+                        <label for='contact_last_name'>Last Name</label>
+                        <input type='text' name='contact_last_name' id='contact_last_name'>
+                        <br>
+                        <label for='contact_phone'>Phone Number</label>
+                        <input type='text' name='contact_phone' id='contact_phone'>
+                        <br>
+                        <label for='contact_street'>Street Address</label>
+                        <input type='text' name='contact_street' id='contact_street'>
+
+                        <label for='contact_city'>City</label>
+                        <input type='text' name='contact_city' id='contact_city'>
+
+                        <label for='contact_state'>State</label>
+                        <input type='text' name='contact_state' id='contact_state'>
+
+                        <label for='contact_zipcode'>Postal Code</label>
+                        <input type='text' name='contact_zipcode' id='contact_zipcode'>
+                        <br>
+                        <button type='submit'>Add Contact</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

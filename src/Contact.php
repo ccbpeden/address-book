@@ -1,16 +1,18 @@
 <?php
     class contact
     {
-        private $contact_name;
+        private $contact_first_name;
+        private $contact_last_name;
         private $contact_phone;
         private $contact_street;
         private $contact_city;
         private $contact_state;
         private $contact_zipcode;
 
-        function __construct($contact_name, $contact_phone, $contact_street, $contact_city, $contact_state, $contact_zipcode)
+        function __construct($contact_first_name, $contact_last_name, $contact_phone, $contact_street, $contact_city, $contact_state, $contact_zipcode)
         {
-            $this->contact_name = $contact_name;
+            $this->contact_first_name = $contact_first_name;
+            $this->contact_last_name = $contact_last_name;
             $this->contact_phone = $contact_phone;
             $this->contact_street = $contact_street;
             $this->contact_city = $contact_city;
@@ -19,9 +21,14 @@
 
         }
 
-        function getContactName()
+        function getContactFirstName()
         {
-            return $this->contact_name;
+            return $this->contact_first_name;
+        }
+
+        function getContactLastName()
+        {
+            return $this->contact_last_name;
         }
 
         function getContactPhone()
@@ -49,9 +56,14 @@
             return $this->contact_zipcode;
         }
 
-        function setContactName($new_name)
+        function setContactFirstName($new_first_name)
         {
-            $this->contact_name = $new_name;
+            $this->contact_first_name = $new_first_name;
+        }
+
+        function setContactLastName($new_last_name)
+        {
+            $this->contact_last_name = $new_last_name;
         }
 
         function setContactPhone($new_phone)
