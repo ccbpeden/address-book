@@ -20,8 +20,10 @@
                         <label for='contact_last_name'>Last Name</label>
                         <input type='text' name='contact_last_name' id='contact_last_name'>
                         <br>
+                        <br>
                         <label for='contact_phone'>Phone Number</label>
                         <input type='text' name='contact_phone' id='contact_phone'>
+                        <br>
                         <br>
                         <label for='contact_street'>Street Address</label>
                         <input type='text' name='contact_street' id='contact_street'>
@@ -35,10 +37,30 @@
                         <label for='contact_zipcode'>Postal Code</label>
                         <input type='text' name='contact_zipcode' id='contact_zipcode'>
                         <br>
+                        <br>
                         <button type='submit'>Add Contact</button>
                     </div>
                 </form>
             </div>
+        </div>
+        <div class="container">
+            {% if contacts is not empty %}
+                <div class=jumbotron>
+                    <h2>Current Contacts</h2>
+                    {% for contact in contacts %}
+                        <ul>
+                            <li>Contact Name: {{ contact.getContactFirstName }} {{ contact.getContactLastName}}</li>
+                            <ul>
+                                <li>Phone Number: {{ contact.getContactPhone }}</li>
+                                <li>Address: {{ contact.getContactStreet}}
+                                              <br>
+                                              {{ contact.getContactCity }},                                          {{ contact.getContactState}} {{ contact.getContactZipcode}}
+                                </li>
+                            </ul>
+                        </ul>
+                    {% endfor %}
+                </div>
+            {% endif %}
         </div>
     </body>
 </html>
