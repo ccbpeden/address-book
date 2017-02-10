@@ -33,7 +33,8 @@ _Please contact me at ccbpeden@warpmail.net if you have any questions or are int
 * _PHP_
 * _Twig_
 * _Composer_
-* _Symphony_
+* _Symfony_
+* _Silex_
 
 
 

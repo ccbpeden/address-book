@@ -1,4 +1,3 @@
-lines (6 sloc)  86 Bytes
 {
     "require": {
         "silex/silex": "~1.1",
