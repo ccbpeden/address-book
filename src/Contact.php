@@ -101,6 +101,11 @@
             array_push($_SESSION['current_contact'], $this);
         }
 
+        function deleteCurrentContact()
+        {
+            $_SESSION['current_contact'] = array();
+        }
+
         static function getCurrentContact()
         {
             return $_SESSION['current_contact'];
