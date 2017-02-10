@@ -10,6 +10,10 @@ _This application allows the user to store name, telephone and address informati
 
 ## Specifications
 
+Takes contact input from user
+Displays all contacts input by user
+Allows user to delete all contacts
+
 
 ## Setup/Installation Requirements
 

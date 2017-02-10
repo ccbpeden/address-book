@@ -12,11 +12,11 @@
                 <h3>Behold his or her digits...</h3>
             </div>
             <div class='container'>
-                <div class='col-md-6'>
-                    <div class=jumbotron>
+                <div class=jumbotron>
+                    <div class='col-md-6'>
                         {% for contact in contacts %}
                             <ul>
-                                <li>Contact: {{ contact.getContactFirstName }} {{ contact.getContactLastName}}</li>
+                                <li>Contact Name: {{ contact.getContactFirstName }} {{ contact.getContactLastName}}</li>
                                 <ul>
                                     <li>Phone Number: {{ contact.getContactPhone }}</li>
                                     <li>Address: {{ contact.getContactStreet}}
@@ -29,7 +29,7 @@
                     </div>
                 </div>
                 <div class='col-md-6'>
-                    <form action='/' method='get'><br><br><br><br>
+                    <form action='/' method='get'>
                         <button type='submit'>return to main page</button>
                     </form>
                 </div>

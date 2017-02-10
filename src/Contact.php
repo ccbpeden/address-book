@@ -96,6 +96,16 @@
             array_push($_SESSION['list_of_contacts'], $this);
         }
 
+        function saveCurrentContact()
+        {
+            array_push($_SESSION['current_contact'], $this);
+        }
+
+        static function getCurrentContact()
+        {
+            return $_SESSION['current_contact'];
+        }
+
         static function getAll()
         {
             return $_SESSION['list_of_contacts'];

@@ -19,7 +19,9 @@
     $app->post("/create_contact", function() use ($app) {
         $new_contact = new Contact($_POST['contact_first_name'], $_POST['contact_last_name'], $_POST['contact_phone'], $_POST['contact_street'], $_POST['contact_city'], $_POST['contact_state'], $_POST['contact_zipcode']);
         $new_contact->saveContact();
-        return $app['twig']->render('contact.html.twig', array('contacts' => Contact::getAll()));
+        $_SESSION['current_contact']=array();
+        $new_contact->saveCurrentContact();
+        return $app['twig']->render('contact.html.twig', array('contacts' => Contact::getCurrentContact()));
     });
 
     $app->post("/delete_contacts", function() use ($app) {
