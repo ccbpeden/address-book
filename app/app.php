@@ -70,7 +70,7 @@
         };
         $current_contact->saveContact();
 
-        return $app['twig']->render('contact.html.twig', array('contacts' => Contact::getCurrentContact()));
+        return $app['twig']->render('index.html.twig', array('contacts' => Contact::getCurrentContact()));
     });
 
     $app->post("/delete_contacts", function() use ($app) {
