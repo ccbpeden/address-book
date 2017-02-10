@@ -41,7 +41,36 @@
     });
 
     $app->post("changeCurrent", function() use ($app) {
-      
+        return $app['twig']->render('change.html.twig', array('contacts' => Contact::getCurrentContact()));
+    });
+
+    $app->post("/changeDetails", function() use ($app) {
+        $current_contact = Contact::getCurrentContact();
+        $current_contact = $current_contact[0];
+        if($_POST['contact_first_name']){
+          $current_contact->setContactFirstName($_POST['contact_first_name']);
+        };
+        if($_POST['contact_last_name']){
+          $current_contact->setContactLastName($_POST['contact_last_name']);
+        };
+        if($_POST['contact_phone']){
+          $current_contact->setContactPhone($_POST['contact_Phone']);
+        };
+        if($_POST['contact_street']){
+          $current_contact->setContactStreet($_POST['contact_street']);
+        };
+        if($_POST['contact_city']){
+          $current_contact->setContactCity($_POST['contact_city']);
+        };
+        if($_POST['contact_state']){
+          $current_contact->setContactState($_POST['contact_state']);
+        };
+        if($_POST['contact_zipcode']){
+          $current_contact->setContactZipcode($_POST['contact_zipcode']);
+        };
+        $current_contact->saveContact();
+
+        return $app['twig']->render('contact.html.twig', array('contacts' => Contact::getCurrentContact()));
     });
 
     $app->post("/delete_contacts", function() use ($app) {
