@@ -20,7 +20,12 @@
         $new_contact = new Contact($_POST['contact_name'], $_POST['contact_name'], $_POST['contact_phone'], $_POST['contact_street'], $_POST['contact_city'], $_POST['contact_state'], $_POST['contact_zipcode']);
         $new_contact->saveContact();
         return $app['twig']->render('contact.html.twig', array('contacts' => Contact::getAll()));
-    })
+    });
+
+    $app->post("/delete_contacts", function() use ($app) {
+        Contact::deleteAll();
+        return $app['twig']->render('deleted.html.twig', array('contacts' => Contact::getAll()));
+    });
 
     return $app;
 ?>
