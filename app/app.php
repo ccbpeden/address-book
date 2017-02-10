@@ -35,6 +35,15 @@
         return $app['twig']->render('index.html.twig', array('contacts' => Contact::getAll()));
     });
 
+    $app->post("/deleteCurrent", function() use ($app) {
+        $_SESSION['current_contact']=array();
+        return $app['twig']->render('index.html.twig', array('contacts' => Contact::getAll()));
+    });
+
+    $app->post("changeCurrent", function() use ($app) {
+      
+    });
+
     $app->post("/delete_contacts", function() use ($app) {
         Contact::deleteAll();
         return $app['twig']->render('deleted.html.twig', array('contacts' => Contact::getAll()));
