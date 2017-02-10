@@ -51,32 +51,32 @@
 
         function setContactName($new_name)
         {
-            this->contact_name = $new_name;
+            $this->contact_name = $new_name;
         }
 
         function setContactPhone($new_phone)
         {
-            this->contact_phone = $new_phone;
+            $this->contact_phone = $new_phone;
         }
 
         function setContactStreet($new_street)
         {
-            this->contact_street = $new_street;
+            $this->contact_street = $new_street;
         }
 
         function setContactCity($new_city)
         {
-            this->contact_city = $new_city;
+            $this->contact_city = $new_city;
         }
 
         function setContactState($new_state)
         {
-            this->contact_state = $new_state;
+            $this->contact_state = $new_state;
         }
 
         function setContactZipcode($new_zipcode)
         {
-            this->contact_zipcode = $new_zipcode;
+            $this->contact_zipcode = $new_zipcode;
         }
 
         function saveContact()
