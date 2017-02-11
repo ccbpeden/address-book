@@ -120,5 +120,14 @@
         {
             $_SESSION['list_of_contacts'] = array();
         }
+
+    }
+    function validateInput()
+    {
+        if(($_POST['contact_first_name'])&&($_POST['contact_last_name'])&&($_POST['contact_phone'])&&($_POST['contact_street'])&&($_POST['contact_city'])&&($_POST['contact_state'])&&($_POST['contact_zipcode'])){
+            return true;
+        } else {
+            return false;
+        }
     }
 ?>
